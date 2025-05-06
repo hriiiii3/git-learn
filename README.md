@@ -32,18 +32,52 @@
    - 添加文件并提交：
      ```bash
      git add .
-     git commit -m "First commit"
+     git commit -m "第一次提交 部署版"
      ```
    - 创建远程仓库，并将本地仓库与远程仓库连接：
      ```bash
-     git remote add origin https://github.com/yourusername/yourrepository.git
+     git remote add origin https://github.com/hriiiii3/liiuxue.git
      ```
    - 推送到 GitHub：
      ```bash
      git push -u origin master
      ```
+   -更改本地项目之后查看文件状态：
+    ```bash
+     git status
+     ```
+     -重新提交修改后的文件：
+    ```bash
+     git add .
+     git commit -m "第二次提交，修复了ai问答功能以及Div模型辅助主题分类功能"
+     ```
+     -查看修改日志：
+    ```bash
+     git log
+     ```
+     -返回：
+     ```bash
+        commit a1595a79b252e0fa39be8d6e89edb24683edad81 (HEAD -> master)
+   Author: Rielle Hua <ruihuaiiii3@foxmail.com>
+   Date:   Wed May 7 01:07:15 2025 +0800
+   
+       Add model.safetensors to LFS
+   
+   commit b0bf0cdbf41b7af5b627b146eaf5f6cf0a72edb8
+   Author: Rielle Hua <ruihuaiiii3@foxmail.com>
+   Date:   Wed May 7 00:50:43 2025 +0800
+   
+       第二次提交，修复了ai问答功能以及Div模型辅助主题分类功能
+   
+   commit c6bce5f38248a9e5fcfe204ac28ec115b1f62b10 (origin/master)
+   Author: Rielle Hua <ruihuaiiii3@foxmail.com>
+   Date:   Wed May 7 00:15:24 2025 +0800
+   
+       第一次提交：部署版；项目初始化
 
-3. **解决上传大文件的难题**
+     ```
+
+4. **解决上传大文件的难题**
    - 学习并使用 Git Large File Storage（LFS）来上传大文件。因为 GitHub 限制了上传文件的大小（最大 100MB），通过 Git LFS 可以解决这个问题：
      ```bash
      git lfs install
@@ -57,21 +91,21 @@
      git push origin master
      ```
 
-4. **解决 Git 连接问题**
+5. **解决 Git 连接问题**
    - 在推送代码时，遇到连接 GitHub 服务器失败的问题，通过增加 Git 的缓冲区大小（1gb）来解决：
      ```bash
      git config --global http.postBuffer 1048576000
      ```
    - 在更改为 HTTPS 后，遇到网络不稳定的问题，通过配置代理来确保连接的稳定性。
 
-5. **通过 SSH 连接 GitHub**
+6. **通过 SSH 连接 GitHub**
    - 配置 SSH 密钥并将其添加到 GitHub：
      ```bash
      ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
      ```
    - 修改远程仓库 URL 为 SSH 连接：
      ```bash
-     git remote set-url origin git@github.com:yourusername/yourrepository.git
+     git remote set-url origin git@github.com:hriiiii3/liiuxue.git
      ```
 
 ## 遇到的困难及解决方法
